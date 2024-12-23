@@ -12,17 +12,20 @@ function App() {
     counter+=1
   }
 
+  const deleteValue=() =>{
+    console.log("clicked",counter);
+    counter-=1
+  }
 
   return (
     <>
-     
-      <h1>Vite + React</h1>
+     <div className="box">
       <h2>Counter value: {counter}</h2>
 
-      <button onClick={addValue}>Add value</button>
+      <button className="add" onClick={addValue}>Add value</button>
       <br />
-      <button>Remove value</button>
-      
+      <button onClick={deleteValue}>Remove value</button>
+      </div>
     </>
   )
 }
